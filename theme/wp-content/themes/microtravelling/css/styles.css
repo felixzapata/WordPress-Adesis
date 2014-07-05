@@ -1,0 +1,9 @@
+/* CSS Document */
+
+@import "jquery.fancybox.css";
+@import "common.css";  		/* Con esta hoja se dara estilo a los elementos comunes de la web */
+@import "layout.css";			/* Con esta hoja se dara estilo a los elementos des estructura comunes de la web */
+@import "presentation.css";	/* Con esta hoja se dara estilo a los diferentes elementos de la web */
+@import "fonts.css";			/* Con esta hoja se dara estilo a las fuentes de la web */	
+
+

@@ -1,0 +1,15 @@
+#content {width:716px; min-height: 464px; padding: 30px 27px;  }
+#content h1 { margin-bottom: 16px; font:normal 17px "RotisSansSerifExtraBold"; color:#073853;  }
+
+.btn { display: block; margin: 0 auto;  }
+	span.btn a {padding:8px 10px; font-size:14px; display:inline-block; text-align:center }
+
+.wysiwyg p { line-height: 16px; color:#323232 }
+
+#footer p { margin-bottom: 13px; padding-left: 10px; font-size:20px; color:#fff; font-family: "RotisSemiSansRegular" }
+#footer ul { margin: 0 0 26px 7px; }
+	#footer li { position: relative; height: 135px; background: url(../img/bck_hoteles.png) no-repeat 0 0 }
+	#footer .img { position: absolute; top:50px; left: 3px }
+		#footer .img img { display: block; border:1px solid #fff; -moz-box-shadow: 0 0 3px #000; -webkit-box-shadow: 0 0 3px #000; box-shadow: 0 0 3px #000; }
+		
+#footer .text { display: none; cursor: pointer; position: absolute; left:1px; top:44px; width: 129px; height: 36px; padding: 7px; background: url(../img/bck_text.png) repeat 0 0; font-size: 15px; font-style: bold; font-family: "RotisSemiSansRegular"; color:#fff;}		

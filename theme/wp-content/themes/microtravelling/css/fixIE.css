@@ -1,0 +1,20 @@
+
+.clearFix, #header, #bodyContent, #footer ul, #wrapper  { zoom:1 }
+
+	#home #content .fadeImages {  top:12px;  }
+
+	#navBar a, #navBar strong {height: 40px; padding-top: 10px; }
+
+.boton { overflow: visible; width: 1;   }
+
+
+#ganadores li, #img li  { display:inline }
+
+#img li { margin-right: 4px; }
+
+#ganadores .text, #ganadores .text2 { top:28px; }
+
+	#ganadores .none .text2 { top:29px; }
+
+
+
