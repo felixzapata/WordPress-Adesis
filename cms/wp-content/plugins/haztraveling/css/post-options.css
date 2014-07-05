@@ -1,0 +1,4 @@
+#post_options label { display:block; font-weight:bold  }
+	#post_options .chk label { display:inline }
+#post_options textarea { width:98% }
+#post_options input.text { width:58% }

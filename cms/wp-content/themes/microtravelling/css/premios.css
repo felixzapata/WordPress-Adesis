@@ -1,0 +1,45 @@
+#bodyContent { min-height: 494px  }
+	
+#content { width:716px; min-height: 464px; padding: 30px 27px;  }
+
+#content h1 { margin-bottom: 16px; font:normal 17px "RotisSansSerifExtraBold"; color:#073853;  }
+
+.btn { display: block; margin: 0 auto; text-align: center }
+
+.wysiwyg p { line-height: 16px; color:#323232 }
+
+.text, .text2 { display: none; cursor: pointer; position: absolute; left:11px; top:29px; width: 143px; height: 88px; padding-top: 5px; background: url(../img/bck_text.png) repeat 0 0; font-size: 14px; color:#fff; text-align: center }
+	.gecko.win #ganadores .text, .gecko.win #ganadores .text2 { top:28px; }
+	
+	/*.text2 { width: 133px; height: 87px; padding: 6px 5px 0; font-family: Arial, sans-serif; font-size:11px; }*/
+	
+
+	
+
+#ganadores { margin: 0 0 0 -14px; padding: 0; list-style: none }
+	#ganadores li { position: relative; display: inline-block; vertical-align: top; width: 165px; height: 128px; margin-bottom: 17px; margin-left: 14px; padding: 7px 0 0; background: url(../img/bck_mes.png) no-repeat 0 0 }
+		#ganadores li:hover { background-image: url(../img/bck_mes-sel.png) }
+		#ganadores li.none:hover { background-image: url(../img/bck_mes.png) }
+	#ganadores img { display: block; margin: 3px auto 0; border: 1px solid #fff; -moz-box-shadow: 0 0 3px #000; -webkit-box-shadow: 0 0 3px #000; box-shadow: 0 0 3px #000;  }
+		#ganadores .none .text img { margin: 0 auto }
+	#ganadores .finalizado { position:relative;}
+		#ganadores .finalizado .spn { position:absolute; z-index:1; top:0; left:0; display:block; width:100%; height:95px;}
+		#ganadores .finalizado .es { background:url(../img/bck_finalizado_es.png) no-repeat center center;}
+		#ganadores .finalizado .cat { background:url(../img/bck_finalizado_cat.png) no-repeat center center;}
+	
+.mes { display: block; text-align: center; font:normal 16px "RotisSansSerifExtraBold"; color:#073853; text-decoration: none }	
+
+
+.next .text { cursor: help; display: block; top:29px; background: #fff; color:#323232; font-family: "RotisSemiSansRegular" }
+
+	.none .text { left: 10px; top:28px; width:144px; height: 93px; padding-top: 0; }
+		.none .text2 { cursor: help;  }
+		.gecko.win #ganadores .none .text2 { top:29px }
+
+#footer p { margin-top:10px; margin-bottom: 13px; padding-left: 10px; font-size:20px; color:#fff; font-family: "RotisSemiSansRegular" }
+
+#footer ul { margin: 10px 0 26px 7px; }
+	#footer li { height: 52px; background:#fff }
+
+		
+	

@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'RotisSemiSansRegular';
+    src: url('tipos/rotiss-webfont.eot');
+    src: url('tipos/rotiss-webfont.eot?#iefix') format('embedded-opentype'),
+         url('tipos/tipos/rotiss-webfont.woff') format('woff'),
+         url('tipos/rotiss-webfont.ttf') format('truetype'),
+         url('tipos/rotiss-webfont.svg#RotisSemiSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'RotisSansSerifExtraBold';
+    src: url('tipos/rbeb___-webfont.eot');
+    src: url('tipos/rbeb___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('tipos/rbeb___-webfont.woff') format('woff'),
+         url('tipos/rbeb___-webfont.ttf') format('truetype'),
+         url('tipos/rbeb___-webfont.svg#RotisSansSerifExtraBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body { font-family:Arial, Verdana, Helvetica, sans-serif;  color:#323232;  }
+
+label { font-weight: normal  }
+
+p { line-height: normal  }
+
+
+
+.wysiwyg{ font-size: 12px;}
+	.wysiwyg p { line-height: 17px  }
+	
+	.wysiwyg h2, .wysiwyg h3, .wysiwyg h4, .wysiwyg h5, .wysiwyg h6 { color:#3366cc; font-weight: normal  }
+	.wysiwyg h2 a, .wysiwyg h3 a, .wysiwyg h4 a, .wysiwyg h5 a, .wysiwyg h6 a { color:#3366cc; font-weight: normal  }
+	
+	.wysiwyg h2 { font-size: 17px  }
+	.wysiwyg h3 { font-size: 16px }
+	.wysiwyg h4 { font-size: 15px }
+	.wysiwyg h5 { font-size: 14px }
+	.wysiwyg h6 { font-size: 13px }
+	.wysiwyg a{color:#3366cc;}
+
+
+#header span { color:#fff; font:normal 14px "RotisSemiSansRegular";  }
+
+#navBar a, #navBar strong, #navBar span { font-family: "RotisSansSerifExtraBold"; font-size:16px; color:#073853  }
+	#navBar a { text-decoration: none }
+	#navBar strong { font-weight: normal }
+
+
+#footer .clearFix span, #footer .clearFix div.frt { color:#fff; font-size:11px }
+	#footer .clearFix a { color:#fff }
+		#footer .clearFix a:hover { text-decoration: none }
+		
+span.btn a { font-family: "RotisSemiSansRegular"; font-size:16px; color:#073853; text-decoration:none;  }
+	span.btn a:hover { text-decoration:underline }		

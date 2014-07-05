@@ -1,0 +1,17 @@
+#content { position: relative; z-index: 10 }
+	#content img { display: block;  border:1px solid #fff; -moz-box-shadow: 0 0 3px #000; -webkit-box-shadow: 0 0 3px #000; box-shadow: 0 0 3px #000; }
+	.text {  position: absolute; left:31px; top:35px; z-index: 11; width: 358px; padding: 20px; font-family: "RotisSemiSansRegular"; color:#fff; font-size:17px; background: url(../img/bck_text.png) repeat 0 0  }
+		.text strong { font-family: "RotisSansSerifExtraBold"; color:#aec9ef; font-weight: normal }
+#footer p { margin-bottom: 13px; padding-left: 10px; font-size:20px; color:#fff; font-family: "RotisSemiSansRegular" }
+
+#footer ul { margin: 0 0 26px 7px; }
+	#footer li { position: relative; height: 135px; background: url(../img/bck_hoteles.png) no-repeat 0 0 }
+	#footer .img { position: absolute; top:50px; left: 3px }
+		#footer .img img { display: block; border:1px solid #fff; -moz-box-shadow: 0 0 3px #000; -webkit-box-shadow: 0 0 3px #000; box-shadow: 0 0 3px #000; }
+		
+#footer .text {cursor: pointer; display: none; position: absolute; left:1px; top:38px; width: 129px; height: 42px; padding: 7px; background: url(../img/bck_text.png) repeat 0 0; font-size: 14px; font-style: bold;}		
+
+
+.fadeImages {  position:relative; width:748px; height:338px; margin: 11px auto 0; }
+	.fadeImages ul { margin:0; padding:0; list-style:none;  }
+		.fadeImages li { position:absolute; }

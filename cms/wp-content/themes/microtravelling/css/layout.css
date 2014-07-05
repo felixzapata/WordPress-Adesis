@@ -1,0 +1,21 @@
+	/**** --- Estructura --- *****/
+	
+html {  text-align: center; background: #2b526d url(../img/bck_body.gif) repeat-x 0 0    }	
+body { width:941px;  margin:0 auto; text-align: left;     }
+
+
+
+#header { position: relative; height: 106px  }
+
+#bodyContent { min-height: 371px  }
+	#content { float:left; width:770px; min-height: 371px; margin:10px 0; background: #fff }
+	#navBar { float: right; width: 171px; padding-top: 33px;   }
+	
+
+#footer { min-height: 222px  }
+
+
+
+
+	
+.clearFix:after, #header:after, #bodyContent:after, #footer ul:after { clear: both; display: block; height: 0; visibility: hidden; content: "." }

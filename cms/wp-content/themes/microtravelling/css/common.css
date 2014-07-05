@@ -1,0 +1,79 @@
+	/***** --- generic elements --- *****/
+
+	body, h1, h2, h3, h4, h5, h6, p, img, hr, form, fieldset, legend, input, select, textarea, dl, dt, dd { margin:0; padding:0;}
+	q:before, q:after{ content: "";  }
+	img, fieldset { border:0;}
+
+	hr, legend, .hidden { display:none; visibility:hidden;}
+
+	acronym, abbr { cursor: help	}
+	
+
+	li { line-height: normal }
+	
+	legend span, label { white-space:normal; }
+	label { padding-right: 0  }
+	
+	.hide {  position: absolute; top: -1500em; left: 0; width: 1px; height: 1px; overflow: hidden;	}
+	
+	form .error input.text, form .error label input.text, .error textarea { border-color:#E00101 !important;  }
+	
+	
+
+
+.clr { clear: both	}
+.frt { float: right	}
+.flt { float: left	}
+.block { display:block}
+.sp { font-size: 1px; line-height:1px }
+.center{display:block;margin:0 auto !important;}
+.imgLeft{float:left;margin:0 10px 5px 0}
+
+.wysiwyg { margin:0 0 10px;}
+.wysiwyg p, .wysiwyg li { margin-bottom: 15px   }
+.wysiwyg ol { padding: 10px 20px;  }
+.wysiwyg ol, .wysiwyg ol li { list-style: decimal }
+.wysiwyg ol ul li { list-style: square }
+	.wysiwyg ol li { padding: 0; background: none  }
+.wysiwyg ul ul, .wysiwyg ul ol, .wysiwyg ol ol, .wysiwyg ol ul { margin-top: 10px  }	
+
+.wysiwyg ul { margin:0 0 0 14px;}
+	.wysiwyg li { padding:0 0 0 14px;background:none;list-style:disc inside;}
+	
+.wysiwyg h2, .wysiwyg h3, .wysiwyg h4, .wysiwyg h5, .wysiwyg h6 { margin-bottom:10px }	
+.wysiwyg h2 p, .wysiwyg h3 p, .wysiwyg h4 p, .wysiwyg h5 p, .wysiwyg h6 p { margin-bottom:0;line-height:11px; }	
+
+
+#header span { position: absolute; left: 12px; top:92px }
+#header .juego { position:absolute; right:-25px; top:0; z-index:12;}
+
+#navBar ul { margin: 0; padding: 0; list-style: none }
+	#navBar li { margin-bottom: 10px }	
+	#navBar a, #navBar strong, #navBar span { display: block; position: relative; left: -9px; z-index: 100; width: 180px; height: 42px; padding-top: 8px; text-align: center  }
+		#navBar .especial a, #navBar .especial strong, #navBar .especial span { line-height: 50px; padding-top: 0; height: 50px }
+	#navBar a { background: url(../img/bck_menu.png) no-repeat 0 0 }
+		#navBar a:hover { background-image: url(../img/bck_menu-hov.png) }
+	#navBar strong, #navBar span { background: url(../img/bck_menu-hov.png) no-repeat 0 0 }
+	#navBar span span, #navBar a span { position: static; width:132px; margin:0 auto; padding-top:0; background:none; }
+
+#footer ul { margin: 0 0 0 7px; padding: 0; list-style: none }
+	#footer li { float: left; width: 150px; margin-right: 5px }
+	
+	#footer .hotel { display: block; width: 150px; height: 50px; overflow:hidden; }
+		#footer .hotel:hover { background-position: 0 -50px;  }
+		#footer .ho1 { background-image: url(../img/hotel1.png)  } 
+		#footer .ho2 { background-image: url(../img/hotel2.png)  }
+		#footer .ho3 { background-image: url(../img/hotel3.png)  }
+		#footer .ho4 { background-image: url(../img/hotel4.png)  }	
+		#footer .ho5 { background-image: url(../img/hotel5.png)  }		
+		#footer .ho6 { background-image: url(../img/hotel6.png)  }		
+
+#footer .clearFix { padding: 0 10px; margin-bottom:10px; }
+	#footer .clearFix span, #footer .clearFix div.frt, #footer .clearFix img, #footer iframe { vertical-align: middle }
+
+span.btn { margin-top:10px }	
+	span.btn a { display:inline-block; padding:8px 16px; border:1px solid #facd01; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background:#f7dc76 url(../img/bck-button.png) repeat-x 0 100%; -moz-box-shadow: inset 0 0 7px #fff9b3; -webkit-box-shadow: inset 0 0 7px #fff9b3; box-shadow: inset 0 0 7px #fff9b3; }
+
+
+iframe.twitter-share-button { width:89px !important }
+	
