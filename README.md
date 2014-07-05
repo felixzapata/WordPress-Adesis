@@ -11,4 +11,4 @@ Proyecto utilizado de ejemplo para la formación "Desarrollo con WordPress" para
 + [Why Choose WordPress CMS to Build Websites: A Government Perspective](http://vip.wordpress.com/2014/06/25/wordpress-cms-government-perspective/)
 + [YeoPress](https://github.com/wesleytodd/YeoPress)
 + [Yeoman WordPress](https://github.com/romainberger/yeoman-wordpress)
-
++ [The Loop](http://codex.wordpress.org/The_Loop)
