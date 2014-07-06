@@ -419,3 +419,55 @@ function remove_header_info() {
 	remove_action('wp_head', 'wp_generator');
 }
 add_action('init', 'remove_header_info');
+
+
+
+class europac_walker_nav_menu extends Walker_Nav_Menu {
+  private $curItem;
+	// add classes to ul sub-menus
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
+	    // depth dependent classes
+	    $indent = ( $depth > 0  ? str_repeat( "\t", $depth ) : '' ); // code indent
+	    $display_depth = ( $depth + 1); // because it counts the first submenu as 0
+	  
+	    // build html
+	    $output .= "\n" . $indent . '<ul role="menu" class="indentado" aria-hidden="true">' . "\n";
+	}
+	  
+	// add main/sub classes to li's and links
+	 function start_el(  &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+	    global $wp_query;
+	    $this->curItem = $item;
+	    $indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
+	  
+	    // build html
+	    if ( in_array( 'menu-item-has-children', $item->classes ) ) {
+	    	$output .= $indent . '<li role="menuitem" aria-haspopup = "true">';
+	    }else {
+	    	$output .= $indent . '<li role="menuitem">';
+	  	}
+
+
+	    // link attributes
+	    $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+	    $attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
+	    $attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
+	    $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+	  
+	  	if ( $depth == 0){
+	  		$item_output = sprintf( '<a%1$s><span>%2$s</span></a>',
+	        $attributes,
+	        apply_filters( 'the_title', $item->title, $item->ID )
+	    	);
+	  	}else {
+	  		$item_output = sprintf( '<a%1$s>%2$s</a>',
+	        $attributes,
+	        apply_filters( 'the_title', $item->title, $item->ID )
+	    	);
+	  	}
+	    
+	  
+	    // build html
+	    $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+	}
+}

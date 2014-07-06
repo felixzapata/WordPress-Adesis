@@ -78,7 +78,7 @@
 
 		<nav id="menuPrincipal" class="main-navigation" role="navigation">
 
-			<?php wp_nav_menu( array('menu' => 'principal', 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			<?php wp_nav_menu( array('menu' => 'principal', 'theme_location' => 'primary', 'menu_class' => '', 'container' => '', 'menu-id' => '', 'items_wrap' => '<ul role="menubar">%3$s</ul>', 'walker' => new europac_walker_nav_menu ) ); ?>
 		</nav><!-- #site-navigation -->
 
 		</div>
