@@ -14,3 +14,4 @@ Proyecto utilizado de ejemplo para la formación "Desarrollo con WordPress" para
 + [The Loop](http://codex.wordpress.org/The_Loop)
 + [Hardening_WordPress](http://codex.wordpress.org/Hardening_WordPress)
 + [The Definitive Guide to WordPress Security](http://moz.com/blog/the-definitive-guide-to-wordpress-security)
++ [Internationalizing And Localizing Your WordPress Theme](http://www.smashingmagazine.com/2011/12/29/internationalizing-localizing-wordpress-theme/)
