@@ -9,3 +9,5 @@ wp-content/cache/
 wp-content/backups/
 sitemap.xml.gz
 node_modules
+.sass-cache
+.tmp
