@@ -11,3 +11,5 @@ sitemap.xml.gz
 node_modules
 .sass-cache
 .tmp
+.DS_Store
+._.DS_Store
