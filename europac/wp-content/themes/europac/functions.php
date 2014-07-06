@@ -8,6 +8,7 @@ define('WP_DIST', true);
 
 $directory_dist = ( WP_DIST ) ? 'dist/' : '';
 
+
 // Set up the content width value based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) )
 	$content_width = 625;
@@ -42,7 +43,6 @@ function europac_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'europac' ) );
 
-	
 
 	// This theme uses a custom image size for featured images, displayed on "standard" posts.
 	add_theme_support( 'post-thumbnails' );
@@ -54,10 +54,10 @@ add_action( 'after_setup_theme', 'europac_setup' );
 /**
  * Enqueue scripts and styles for front-end.
  *
- 
  */
 function europac_scripts_styles() {
 	global $wp_styles;
+	global $directory_dist;
 
 	/*
 	 * Adds JavaScript to pages with the comment form to support
@@ -66,9 +66,11 @@ function europac_scripts_styles() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
 		wp_enqueue_script( 'comment-reply' );
 
-
 	// Loads our main stylesheet.
-	wp_enqueue_style( 'europac-style', get_stylesheet_uri() );
+	
+	$main_stylesheet = ( $directory_dist != '' ) ? get_template_directory_uri() . '/css/'.$directory_dist.'styles.css' : get_stylesheet_uri();
+
+	wp_enqueue_style( 'europac-style', $main_stylesheet );
 
 	// Loads the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'europac-ie', get_template_directory_uri() . '/css/ie.css', array( 'europac-style' ), '20121010' );
@@ -77,6 +79,12 @@ function europac_scripts_styles() {
 
 
 add_action( 'wp_enqueue_scripts', 'europac_scripts_styles' );
+
+function javaScripts_europac() {
+	global $directory_dist;
+    wp_enqueue_script('scripts-footer',  get_template_directory_uri() . '/js/'.$directory_dist.'common.js', array('jquery'), '', true);
+}
+add_action('wp_enqueue_scripts', 'javaScripts_europac');
 
 /**
  * Filter TinyMCE CSS path to include Google Fonts.
@@ -367,3 +375,47 @@ function europac_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'europac_body_class' );
+
+
+function europac_nav_menu_args( $args ) {
+	    $args['show_home'] = false;
+	    return $args;
+	}
+	add_filter( 'wp_nav_menu_args', 'europac_nav_menu_args' );
+
+
+
+function remove_dashboard_widgets() {
+	// Globalize the metaboxes array, this holds all the widgets for wp-admin
+	global $wp_meta_boxes;
+
+	// Main Modules
+
+	// Remove the recent comments widget
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+	// Remove the incoming links widget
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_incoming_links']);
+	// Remove the plugins widget
+	unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+
+	// Secondary Modules
+	// Remove the quickpress widget
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+	// Remove the recent drafts widget
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_recent_drafts']);
+	// Remove the primary feed widget
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+	// Remove the secondary feed widget
+	unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+
+}
+
+// Hoook into the 'wp_dashboard_setup' action to register our function
+add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+
+function remove_header_info() {
+	remove_action('wp_head', 'rsd_link');
+	remove_action('wp_head', 'wlwmanifest_link');
+	remove_action('wp_head', 'wp_generator');
+}
+add_action('init', 'remove_header_info');

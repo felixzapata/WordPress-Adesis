@@ -29,22 +29,64 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
+<div id="wrapperContent"  class="cuerpo">
+	<header id="cabecera" role="banner">
+		<div class="clear">
+			<div class="frt">
+				<div class="enlacesTop">
+					<ul>
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Ayuda</a></li>
+						<li><a href="#">Contacto</a></li>
+						<li><a href="#">Envía tu CV</a></li>
+					</ul>
+				</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h3 class="menu-toggle"><?php _e( 'Menu', 'europac' ); ?></h3>
-			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'europac' ); ?>"><?php _e( 'Skip to content', 'europac' ); ?></a>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+				<div class="lang"><a href="">Español</a></div>
+
+				<div class="buscador">
+					<form method="post" action="#" id="buscadorForm">
+
+							<p>
+								<label for="buscador">
+									<span class="indentado">Buscar</span>
+									<input type="text" id="buscador" name="buscador"  placeholder="Buscar">
+								</label>
+								<input type="image" src="<?php echo get_template_directory_uri(); ?>/img/i_search.png" alt="buscar por término" />
+							</p>
+
+					</form>
+				</div>
+
+				<a href="" id="btnZonCl" class="lanzaPopup">ZONA CLIENTES</a>
+
+				<div id="zonaCl" class="indentado">
+				</div>
+
+
+			</div>
+		</div>
+		<div class="clear">
+			<div id="logo">
+				<?php if( is_home() ) { ?>
+				<img src="<?php echo get_template_directory_uri(); ?>/img/logo_europac.png" alt="EUROPAC" />
+				<?php  } else {  ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo_europac.png" alt="EUROPAC" /></a>
+				<?php  } ?>
+			</div>
+		
+
+		<nav id="menuPrincipal" class="main-navigation" role="navigation">
+
+			<?php wp_nav_menu( array('menu' => 'principal', 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 
-		<?php if ( get_header_image() ) : ?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
-		<?php endif; ?>
-	</header><!-- #masthead -->
+		</div>
 
-	<div id="main" class="wrapper">
+		
+	</header><!-- #masthead -->
+<?php if( !is_home() ) { ?>
+	<section id="bodyContent" class="layout2Cols">
+<?php  } else {  ?>
+<section id="bodyContent" class="layout2ColsNoMenu">
+<?php  } ?>
