@@ -1,0 +1,41 @@
+// Mixins
+
+@mixin clear($elemento) {
+	#{$elemento}:before, #{$elemento}:after { content:""; display:table; }
+	#{$elemento}:after { clear:both; }
+	* html #{$elemento}  {height:1%;}
+	*:first-child+html #{$elemento} {height:auto; display:inline-block;}
+}
+
+@mixin formato-titulo {
+	font-size:26px;
+	font-family:$openSansLight;
+}
+
+@mixin date {
+	display:block;
+	margin-bottom:5px;
+	color:#666;
+	font-size:11px;
+}
+
+@mixin degradado_generico {
+	@include background(image-url("foo.png"), linear-gradient(#efefec, #e6e6e1));
+    background-color:#efefec;
+}
+
+@mixin round-module {
+	@include border-radius(3px);
+    @include box-shadow(rgba(150, 150, 150, 0.6) 2px 3px 2px);
+}
+
+@mixin boton-tipo-lateral {
+	padding:5px;
+	background-color:#000;
+	background-color:rgba(0,0,0,0.5);
+	border:none;
+	@include border-radius(3px);
+	font-family:$openSans;
+	font-size:12px;
+	color:#fff;
+}

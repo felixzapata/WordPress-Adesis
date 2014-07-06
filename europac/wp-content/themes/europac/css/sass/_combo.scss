@@ -1,0 +1,11 @@
+
+
+	.ui-widget-content a:hover { background:transparent; }
+.ui-selectmenu-menu li a, .ui-selectmenu-status { padding:3px 10px 5px 10px; color:#666; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br, .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {border-radius:3px; border:1px solid #E4E6E7; font-size:12px; font-family:$openSans;}
+span.ui-selectmenu-item-header, .ui-widget-content, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { background:#F6F6F6 }
+.ui-selectmenu-icon { margin-top:-11px; right:3px }
+.ui-icon { width:20px; height:20px }
+.ui-state-default .ui-icon { background: url("../img/i_down.png") no-repeat 50% 50%; }
+
+.ui-selectmenu-menu {margin-top:1px; border-radius:0; border-top:none }

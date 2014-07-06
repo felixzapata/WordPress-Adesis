@@ -1,0 +1,53 @@
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+/* fix buttons height */
+  line-height: 1em;
+/* you can be more comfortable with increased icons size */
+/* font-zize: 120%; */
+}
+
+.icon-rss { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe73a;&nbsp;'); }
+.icon-dot-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe78c;&nbsp;'); }
+.icon-twitter-bird { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf303;&nbsp;'); }
+.icon-linkedin { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf31a;&nbsp;'); }
+
+
+/*
+* para arreglar el bug del wrap del texto en un legend en IE
+* http://beckism.com/2008/12/display_block_legend/
+* http://www.456bereastreet.com/archive/200905/line_wrapping_text_in_legend_elements/
+*/
+legend span { float:left; }
+
+
+.enlacesTop { padding-top:7px; }
+	.enlacesTop  li { padding-right:6px; padding-left:6px; }
+#cabecera .lang { padding:7px 0 5px 20px; background-position:0 7px }
+#btnZonCl { padding-right:10px; background:#416a81  url("../img/bg_candado.png") no-repeat 10px 7px}
+
+.menuAuxiliar span { background-position:95% 12px; }
+
+.enlacesPie li { display:inline };
+	.enlacesPie li li { display:block };
+
+
+.areasEuropac li { display:inline; }
+
+.modNewsletter input[type="submit"], .formContact input[type="submit"]{ width:1; overflow:visible; }
+
+.carrusel .paginacion li { display:inline; padding-right:5px; }
+
+
+.thumbnails li { float:left; }
+
+.moduloImgEspecial img { top:4px;  }
+
+.buscarNoticias input[type="image"], .buscador input[type="image"]{ top:-2px;  }
+
+#infoLugares .tabs { float:right; padding-left:0; padding-right:76px;  }
+
+
+.loc, .faldon { display:block; }

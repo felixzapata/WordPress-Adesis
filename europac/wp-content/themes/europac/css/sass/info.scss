@@ -1,0 +1,198 @@
+/* estilos.scss */
+// Importamos CSS3 de compass
+@import "compass/css3";
+@import "compass/css3/text-shadow";
+$experimental-support-for-svg: true; // Necesario para que los degradados css3 funcionen en IE9 y Opera
+
+// FUENTES
+$arial: Arial, sans-serif;
+$openSans: 'open_sansregular';
+$openSansItalic: 'open_sansitalic';
+$openSansBold: 'open_sansbold';
+$openSansBoldItalic: 'open_sansbold_italic';
+$openSansExtraBoldItalic: 'open_sans_extrabolditalic';
+$openSansSemiBoldItalic: 'open_sans_semibolditalic';
+$openSansLight: 'open_sans_lightregular';
+$openSansLightItalic: 'open_sans_lightitalic';
+$tipoFuente : px;
+
+@import "tipos_embebidas";
+
+// Importamos nuestros mixins, retícula y auxiliares
+@import "reset";
+@import "mixins";
+
+
+/* ESTILOS GENERALES */
+html { background:none; }
+body { color:#666; font-family:$arial; text-align: left; }
+strong { font-weight:bold }
+
+/* redefinicion del modelo de caja para los elementos DIV y declaracion de la clase 'clear' para el resto de elementos para evitar problemas de entidad con las flotaciones */
+.clear:before, .clear:after, #infoLugares:before, #infoLugares:after { content:""; display:table; }
+.clear:after, #infoLugares:after { clear:both; }
+* html .clear, * html #infoLugares {height:1%;}
+*:first-child+html .clear, *.first-child+html #infoLugares {height:auto; display:inline-block;}
+
+// Clases generales
+.clr {clear:both}
+.flt {float:left }
+.frt {float:right }
+.indentado {position:absolute;top:-1500em;left:0;width:1px;height:1px;overflow:hidden}
+
+
+$color_papel : #135481;
+$color_energia : #d57d0d;
+$color_carton : #af9417;
+$color_gestion : #498d2f;
+$color_otros : #808080;
+
+#infoLugares {
+    width:909px;
+    margin:0 auto;
+     // border:1px solid #ced6db;
+     border:1px solid transparent;
+    @include border-radius(3px);
+    // background:rgba(245,245,245,0.93);
+}
+
+ #map {
+    float:left;
+    width:387px;
+    height: 465px;
+    @include border-top-left-radius(5px);
+    @include border-bottom-left-radius(5px);
+ }
+
+.info {
+    // position:relative;
+    // top:-47px;
+    float:right;
+    width:522px;
+    // margin-bottom:-47px;
+}
+
+.tabs {
+    position:relative;
+    top:1px;
+    margin-top:-2px;
+    padding-left:387px;
+    li {
+        float:left;
+        border-top-width:6px;
+        border-style:solid;
+        &.activo {
+            background-color:#fff;
+            a {
+                border-bottom:1px solid #fff;
+            }
+        }
+    }
+    a {
+        display:block;
+        padding:12px;
+        border-left:1px solid #d6dadc;
+        border-bottom:1px solid #d6dadc;
+        text-decoration:none;
+        &:hover {
+            text-decoration:underline;
+        }
+    }
+    .s1 {
+        background-color:#e1eaf0;
+        border-top-color:$color_papel;
+        a {
+           color:$color_papel;
+        }
+    }
+    .s2 {
+        background-color:#f7f4eb;
+        border-top-color:$color_energia;
+        a {
+           color:$color_energia;
+        }
+    }
+    .s3 {
+        background-color:#f0f0e9;
+        border-top-color:$color_carton;
+        a {
+           color:$color_carton;
+        }
+    }
+    .s4 {
+        background-color:#eff4ed;
+        border-top-color:$color_gestion;
+        a {
+           color:$color_gestion;
+        }
+    }
+    .s5 {
+        background-color:#ebeef0;
+        border-top-color:$color_otros;
+        border-right:1px solid #d6dadc;
+        a {
+           color:$color_otros;
+        }
+    }
+}
+
+.scroll-pane {
+    width:462px;
+    height:422px;
+}
+
+.wrap {
+    width:468px;
+    margin-bottom:-1px;
+    padding:26px 11px 17px 31px;
+    border:1px solid #d6dadc;
+    @include border-bottom-right-radius(5px);
+    background-color:#fff;
+    dt {
+        margin-bottom:9px;
+        color:#999;
+        font:normal 24px $openSansLight;
+    }
+    dd {
+        margin-bottom:33px;
+        padding-left:28px;
+        background-repeat:no-repeat;
+        background-position:0 0;
+        li {
+            margin-bottom:10px;
+        }
+        strong {
+            display:block;
+            margin-bottom:5px;
+            font:normal 16px $openSansBold;
+        }
+        p {
+            font-size:14px;
+        }
+    }
+    &.s1{
+        dd {
+            background-image:url("../img/i_papel.png");
+        }
+    }
+    &.s2{
+        dd {
+            background-image:url("../img/i_energia.png");
+        }
+    }
+    &.s3{
+        dd {
+            background-image:url("../img/i_carton.png");
+        }
+    }
+    &.s4{
+        dd {
+            background-image:url("../img/i_gestion.png");
+        }
+    }
+    &.s5{
+        dd {
+            background-image:url("../img/i_otras.png");
+        }
+    }
+}
