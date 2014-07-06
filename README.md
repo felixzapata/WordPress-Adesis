@@ -12,3 +12,5 @@ Proyecto utilizado de ejemplo para la formación "Desarrollo con WordPress" para
 + [YeoPress](https://github.com/wesleytodd/YeoPress)
 + [Yeoman WordPress](https://github.com/romainberger/yeoman-wordpress)
 + [The Loop](http://codex.wordpress.org/The_Loop)
++ [Hardening_WordPress](http://codex.wordpress.org/Hardening_WordPress)
++ [The Definitive Guide to WordPress Security](http://moz.com/blog/the-definitive-guide-to-wordpress-security)
