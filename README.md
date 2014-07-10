@@ -22,3 +22,4 @@ Proyecto utilizado de ejemplo para la formación "Desarrollo con WordPress" para
 + [GenerateWP - User friendly tools for WordPress developers](http://generatewp.com/)
 + [Plugin Developer Handbook](https://make.wordpress.org/docs/plugin-developer-handbook/)
 + [Theme Developer Handbook](http://make.wordpress.org/docs/theme-developer-handbook/)
++ [PHP code formatter for Sublime Text editor with phptidy](https://github.com/welovewordpress/SublimePhpTidy)
